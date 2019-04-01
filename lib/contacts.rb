@@ -18,11 +18,13 @@ def remove_strawberry(contacts)
   contacts.each do |person, data|
     data.each do |attribute, value|
       if attribute == :favorite_ice_cream_flavors && person == "Freddy Mercury"
-        value.each_with_index do |flavor, index|
-          if flavor == "strawberry"
-            value.shift[index]
-          end
-        end
+        data.delete_if {|ice_cream| ice_cream == "strawberry"}
+        # The following code also works but the line above is much neater:
+        # value.each_with_index do |flavor, index|
+        #   if flavor == "strawberry"
+        #     value.shift[index]
+        #   end
+        # end
       end
     end
   end
