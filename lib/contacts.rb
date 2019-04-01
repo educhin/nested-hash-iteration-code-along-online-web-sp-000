@@ -20,7 +20,7 @@ def remove_strawberry(contacts)
       if attribute == :favorite_ice_cream_flavors && person == "Freddy Mercury"
         value.each_with_index do |flavor, index|
           if flavor == "strawberry"
-            attribute.shift[index]
+            value.shift[index]
           end
         end
       end
