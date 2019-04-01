@@ -23,6 +23,7 @@ def remove_strawberry(contacts)
             attribute.remove[flavor]
           end
         end
+      end
     end
   end
 end
